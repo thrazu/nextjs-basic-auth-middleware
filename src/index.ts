@@ -60,7 +60,7 @@ const basicAuthMiddleware = async (
   if (!currentUser || !compareCredentials(currentUser, credentialsObject)) {
     res.statusCode = 401
     res.setHeader('WWW-Authenticate', `Basic realm="${realm}"`)
-    res.end('401 Access Denied')
+    // res.end('401 Access Denied')
   }
 }
 
